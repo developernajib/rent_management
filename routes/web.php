@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\RentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +29,12 @@ Route::middleware('auth')->group(function () {
 
 
 Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function () {
-    Route::view("/", 'dashboard.dashboard')->name('admin_dashboard');
-    Route::view("/clients", 'dashboard.dashboard')->name('clients');
-    Route::view("/rents", 'dashboard.dashboard')->name('rents');
+    Route::get("/", [DashboardController::class, 'index'])->name('admin_dashboard');
+
+    Route::resources([
+        'clients' => ClientController::class,
+        'rents' => RentController::class,
+    ]);
 });
 
 
