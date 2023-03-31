@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #5f76e8;
+    --secondary-color: #01caf1;
+    --optional-color: #ff4f70;
+}
+
+.sidebar-item.active {
+    background: var(--primary-color);
+    border-radius: 30px;
+    color: white;
+}
+
+.sidebar-item.active a.sidebar-link,
+.sidebar-item.active a.sidebar-link svg.feather-icon {
+    color: white !important;
+}
