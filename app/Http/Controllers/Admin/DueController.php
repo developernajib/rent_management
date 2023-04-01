@@ -4,17 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Client;
 
-class ClientController extends Controller
+class DueController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $clients = Client::orderBy('created_at', 'DESC')->get();
-        return view('dashboard.clients.index', compact('clients'));
+        //
     }
 
     /**
@@ -22,7 +20,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('dashboard.clients.create');
+        //
     }
 
     /**

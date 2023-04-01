@@ -17353,7 +17353,7 @@ a.text-purple:hover {
 
 .page-wrapper>.container-fluid {
     padding: 35px;
-    min-height: calc(100vh - 210px)
+    min-height: calc(100vh - 140px)
 }
 
 .footer {

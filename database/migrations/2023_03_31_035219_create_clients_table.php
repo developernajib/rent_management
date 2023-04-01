@@ -17,12 +17,12 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('email')->unique()->nullable();
             $table->string('mobile_number', 20)->nullable();
-            $table->string('property_identity')->nullable();
             $table->string('property_address')->nullable();
             $table->decimal('total_rent', 10, 2);
             $table->decimal('discount_percent', 4, 2)->default(0.00)->nullable();
             $table->decimal('discount_amount', 7, 2)->default(0.00)->nullable();
             $table->boolean('client_status')->default(false);
+            $table->string('client_image')->nullable();
             $table->timestamps();
         });
     }

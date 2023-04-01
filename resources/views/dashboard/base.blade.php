@@ -10,12 +10,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon.png') }}">
     <title>@yield('title', 'Admin Dashboard')</title>
     <!-- Custom CSS -->
-    <link href="{{ asset('assets/extra-libs/c3/c3.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/libs/chartist/dist/chartist.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet" />
-    <!-- Custom CSS -->
     <link href="{{ asset('assets/css/style.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/custome.css') }}" rel="stylesheet">
+    @yield('extra_css')
 </head>
 
 <body>
@@ -62,13 +59,7 @@
     <!--Custom JavaScript -->
     <script src="{{ asset('assets/js/custom.min.js') }}"></script>
     <!--This page JavaScript -->
-    <script src="{{ asset('assets/extra-libs/c3/d3.min.js') }}"></script>
-    <script src="{{ asset('assets/extra-libs/c3/c3.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/chartist/dist/chartist.min.js') }}"></script>
-    <script src="{{ asset('assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js') }}"></script>
-    <script src="{{ asset('assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js') }}"></script>
-    <script src="{{ asset('assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js') }}"></script>
-    <script src="{{ asset('assets/js/pages/dashboards/dashboard1.min.js') }}"></script>
+    @yield('extra_js')
 </body>
 
 </html>
